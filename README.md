@@ -7,4 +7,5 @@
 4. sourceforge.net中的汉语字符串转换为拼音的jar包
 
 交流方式
-songzhiyong1121@gmail.com
+E-mail:songzhiyong1121@gmail.com
+QQ:780834790
