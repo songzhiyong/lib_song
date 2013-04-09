@@ -44,10 +44,10 @@ public class BitmapUtils {
 		if (2 * radius > Math.min(bmp.getWidth(), bmp.getHeight())) {
 			throw new Exception("参数错误");
 		}
-		Canvas canvas = new Canvas();
-		Paint paint = new Paint();
 		destBmp = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), Config.ARGB_8888);
-		canvas.setBitmap(bmp);
+		Canvas canvas = new Canvas(destBmp);
+		Paint paint = new Paint();
+	        canvas.setBitmap(bmp);
 		Rect rect = new Rect(0, 0, bmp.getWidth(), bmp.getHeight());
 		RectF rectF = new RectF(rect);
 		// 去锯齿
