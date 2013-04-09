@@ -47,7 +47,6 @@ public class BitmapUtils {
 		destBmp = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), Config.ARGB_8888);
 		Canvas canvas = new Canvas(destBmp);
 		Paint paint = new Paint();
-	        canvas.setBitmap(bmp);
 		Rect rect = new Rect(0, 0, bmp.getWidth(), bmp.getHeight());
 		RectF rectF = new RectF(rect);
 		// 去锯齿
