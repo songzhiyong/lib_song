@@ -12,8 +12,15 @@ import java.util.zip.ZipOutputStream;
 
 /**
  * 
- * Android Zip压缩解压缩
+ * ClassName:Zip <br>
+ * Function: Android文件解压压缩
  * 
+ * @author Jerome Song
+ * @version
+ * @since Ver 1.1
+ * @Date 2013 2013-5-15 下午10:00:57
+ * 
+ * @see
  */
 public class Zip {
 
