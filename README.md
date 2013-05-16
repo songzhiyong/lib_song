@@ -6,6 +6,7 @@
 3. android orm映射框架 ormlite (类似于hibernate)
 4. sourceforge.net中的汉语字符串转换为拼音的jar包
 5. 添加Async-http-client源码
+6. Android中对Zip压缩包的处理
 交流方式
 E-mail:songzhiyong1121@gmail.com
 QQ:780834790
