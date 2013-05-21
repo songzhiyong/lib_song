@@ -1,4 +1,4 @@
-package com.utils;
+package com.jerome.common.utils;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
