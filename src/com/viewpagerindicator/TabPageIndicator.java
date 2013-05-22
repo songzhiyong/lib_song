@@ -29,7 +29,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.lib_song.R;
+import com.jerome.lib_song.R;
 
 /**
  * This widget implements the dynamic action bar tab behavior that can change

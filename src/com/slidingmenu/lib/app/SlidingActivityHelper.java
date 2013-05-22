@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 
-import com.example.lib_song.R;
+import com.jerome.lib_song.R;
 import com.slidingmenu.lib.SlidingMenu;
 
 public class SlidingActivityHelper {

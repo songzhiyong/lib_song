@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- SlidingMenu -->
+
     <declare-styleable name="SlidingMenu">
         <attr name="mode">
             <enum name="left" value="0" />
@@ -25,6 +27,23 @@
         <attr name="fadeDegree" format="float" />
         <attr name="selectorEnabled" format="boolean" />
         <attr name="selectorDrawable" format="reference" />
+    </declare-styleable>
+
+    <!-- ProgressButton  -->
+    <attr name="progressButtonStyle" format="reference" />
+    <declare-styleable name="ProgressButton">
+        <attr name="progress" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="progressColor" format="color" />
+        <attr name="pinnedDrawable" format="reference" />
+        <attr name="unpinnedDrawable" format="reference" />
+        <attr name="pbshadowDrawable" format="reference" />
+		<attr name="innerSize" format="dimension" />
+        <attr name="pinned" format="boolean" />
+        <attr name="android:selectableItemBackground" />
+        <attr name="android:clickable" />
+        <attr name="android:focusable" />
     </declare-styleable>
 
 </resources>
