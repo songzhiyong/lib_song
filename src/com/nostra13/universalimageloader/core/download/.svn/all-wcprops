@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/download
+END
+HttpClientImageDownloader.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/download/HttpClientImageDownloader.java
+END
+SlowNetworkImageDownloader.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/download/SlowNetworkImageDownloader.java
+END
+ImageDownloader.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/download/ImageDownloader.java
+END
+NetworkDeniedImageDownloader.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/download/NetworkDeniedImageDownloader.java
+END
+BaseImageDownloader.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/download/BaseImageDownloader.java
+END

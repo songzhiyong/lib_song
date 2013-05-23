@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/cache/disc/impl
+END
+UnlimitedDiscCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/cache/disc/impl/UnlimitedDiscCache.java
+END
+FileCountLimitedDiscCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/cache/disc/impl/FileCountLimitedDiscCache.java
+END
+LimitedAgeDiscCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/cache/disc/impl/LimitedAgeDiscCache.java
+END
+TotalSizeLimitedDiscCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/cache/disc/impl/TotalSizeLimitedDiscCache.java
+END

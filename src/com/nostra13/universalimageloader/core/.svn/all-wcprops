@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core
+END
+ImageLoaderEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/ImageLoaderEngine.java
+END
+ImageLoaderConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/ImageLoaderConfiguration.java
+END
+DefaultConfigurationFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/DefaultConfigurationFactory.java
+END
+DisplayImageOptions.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/DisplayImageOptions.java
+END
+DisplayBitmapTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/DisplayBitmapTask.java
+END
+ImageLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/ImageLoader.java
+END
+ImageLoadingInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/ImageLoadingInfo.java
+END
+ProcessAndDisplayImageTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/ProcessAndDisplayImageTask.java
+END
+LoadAndDisplayImageTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/LoadAndDisplayImageTask.java
+END

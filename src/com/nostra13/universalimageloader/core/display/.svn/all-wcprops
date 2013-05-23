@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/display
+END
+FadeInBitmapDisplayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/display/FadeInBitmapDisplayer.java
+END
+FakeBitmapDisplayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/display/FakeBitmapDisplayer.java
+END
+SimpleBitmapDisplayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/display/SimpleBitmapDisplayer.java
+END
+BitmapDisplayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/display/BitmapDisplayer.java
+END
+RoundedBitmapDisplayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Demo/!svn/ver/30/ImageLoader_library/src/com/nostra13/universalimageloader/core/display/RoundedBitmapDisplayer.java
+END
