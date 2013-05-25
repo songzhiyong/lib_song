@@ -4,10 +4,12 @@
  * 创建时间：2012-12-30
  */
 package com.jerome.utils.media;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.Bitmap.Config;
@@ -21,6 +23,7 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Shader.TileMode;
+
 /**
  * 功能：Bitmap相关操作及特效
  * 
@@ -29,6 +32,7 @@ import android.graphics.Shader.TileMode;
  */
 public class BitmapUtils {
 	private static Bitmap destBmp = null;
+
 	/**
 	 * 创建圆角图片
 	 * 
@@ -40,11 +44,13 @@ public class BitmapUtils {
 	 * @throws Exception
 	 *             圆角直径大于最小边长
 	 */
-	public static Bitmap createRoundCornerImg(Bitmap bmp, int radius) throws Exception {
+	public static Bitmap createRoundCornerBmp(Bitmap bmp, int radius)
+			throws Exception {
 		if (2 * radius > Math.min(bmp.getWidth(), bmp.getHeight())) {
 			throw new Exception("参数错误");
 		}
-		destBmp = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), Config.ARGB_8888);
+		destBmp = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(),
+				Config.ARGB_8888);
 		Canvas canvas = new Canvas(destBmp);
 		Paint paint = new Paint();
 		Rect rect = new Rect(0, 0, bmp.getWidth(), bmp.getHeight());
@@ -57,6 +63,7 @@ public class BitmapUtils {
 		canvas.drawBitmap(bmp, null, rect, paint);
 		return destBmp;
 	}
+
 	/**
 	 * 保存图片到指定的路径
 	 * 
@@ -71,8 +78,8 @@ public class BitmapUtils {
 	 * @throws IOException
 	 *             IO异常
 	 */
-	public static void saveBitmap(CompressFormat format, Bitmap bmp, String path, int quality)
-			throws IOException {
+	public static void saveBitmap(CompressFormat format, Bitmap bmp,
+			String path, int quality) throws IOException {
 		File file = new File(path);
 		if (!file.getParentFile().exists())
 			file.getParentFile().mkdirs();
@@ -82,6 +89,7 @@ public class BitmapUtils {
 		FileOutputStream stream = new FileOutputStream(file);
 		bmp.compress(format, quality, stream);
 	}
+
 	/**
 	 * 利用Matrix旋转图片
 	 * 
@@ -94,10 +102,12 @@ public class BitmapUtils {
 	public static Bitmap rotate(Bitmap bmp, int degree) {
 		Matrix matrix = new Matrix();
 		matrix.postRotate(degree);
-		destBmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
+		destBmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(),
+				bmp.getHeight(), matrix, true);
 		bmp.recycle();
 		return destBmp;
 	}
+
 	/**
 	 * 根据传入的Bitmap对象构建带有倒影的Bitmap
 	 * 
@@ -117,11 +127,11 @@ public class BitmapUtils {
 		Matrix matrix = new Matrix();
 		matrix.preScale(1, -1);
 		// 获取倒影Bitmap
-		Bitmap reflectionBitmap = Bitmap.createBitmap(bmp, 0, height / 2, width, height / 2,
-				matrix, false);
+		Bitmap reflectionBitmap = Bitmap.createBitmap(bmp, 0, height / 2,
+				width, height / 2, matrix, false);
 		// 获取带倒影的Bitmap.即整体的效果图位图对象
-		Bitmap withReflectionBitmap = Bitmap.createBitmap(width, height + height / 2,
-				Config.ARGB_8888);
+		Bitmap withReflectionBitmap = Bitmap.createBitmap(width, height
+				+ height / 2, Config.ARGB_8888);
 		/** Bitmap的显示还需要画布Canvas来完成 */
 		// 由该位图对象创建初始画布(规定了画布的宽高)
 		Canvas canvas = new Canvas(withReflectionBitmap);
@@ -134,16 +144,18 @@ public class BitmapUtils {
 		// 绘制线性渐变对象
 		Paint paint2 = new Paint();
 		LinearGradient shader = new LinearGradient(0, bmp.getHeight(), 0,
-				withReflectionBitmap.getHeight() + reflectionGap, 0x70ffffff, 0x00ffffff,
-				TileMode.CLAMP);
+				withReflectionBitmap.getHeight() + reflectionGap, 0x70ffffff,
+				0x00ffffff, TileMode.CLAMP);
 		// 把渐变效果应用在画笔上
 		paint2.setShader(shader);
 		// 设置倒影的阴影度，使其与原来的图像颜色区别开来，此处显示灰度，会被染上下面的底部的原图片的倒影颜色，实现倒影的修饰
 		paint2.setXfermode(new PorterDuffXfermode(Mode.DST_IN));
 		// 用设置好的paint2绘制此倒影
-		canvas.drawRect(0, height, width, withReflectionBitmap.getHeight() + reflectionGap, paint2);
+		canvas.drawRect(0, height, width, withReflectionBitmap.getHeight()
+				+ reflectionGap, paint2);
 		return withReflectionBitmap;
 	}
+
 	/**
 	 * 怀旧效果(相对之前做了优化快一倍)
 	 * 
@@ -174,14 +186,15 @@ public class BitmapUtils {
 				newR = (int) (0.393 * pixR + 0.769 * pixG + 0.189 * pixB);
 				newG = (int) (0.349 * pixR + 0.686 * pixG + 0.168 * pixB);
 				newB = (int) (0.272 * pixR + 0.534 * pixG + 0.131 * pixB);
-				int newColor = Color.argb(255, newR > 255 ? 255 : newR, newG > 255 ? 255 : newG,
-						newB > 255 ? 255 : newB);
+				int newColor = Color.argb(255, newR > 255 ? 255 : newR,
+						newG > 255 ? 255 : newG, newB > 255 ? 255 : newB);
 				pixels[width * i + k] = newColor;
 			}
 		}
 		destBmp.setPixels(pixels, 0, width, 0, 0, width, height);
 		return destBmp;
 	}
+
 	/**
 	 * 图片锐化（拉普拉斯变换）
 	 * 
@@ -233,6 +246,7 @@ public class BitmapUtils {
 		destBmp.setPixels(pixels, 0, width, 0, 0, width, height);
 		return destBmp;
 	}
+
 	/**
 	 * 柔化效果(高斯模糊)(优化后比上面快三倍)
 	 * 
@@ -287,6 +301,7 @@ public class BitmapUtils {
 		destBmp.setPixels(pixels, 0, width, 0, 0, width, height);
 		return destBmp;
 	}
+
 	/**
 	 * 底片效果
 	 * 
@@ -329,6 +344,7 @@ public class BitmapUtils {
 		destBmp.setPixels(pixels, 0, width, 0, 0, width, height);
 		return destBmp;
 	}
+
 	/**
 	 * Bitmap转换到Byte[]
 	 * 
@@ -340,5 +356,55 @@ public class BitmapUtils {
 		ByteArrayOutputStream bas = new ByteArrayOutputStream();
 		bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bas);
 		return bas.toByteArray();
+	}
+
+	/**
+	 * 截取Bitmap为CenterCrop样式
+	 * 
+	 * @param @param source
+	 * @param @param newHeight
+	 * @param @param newWidth
+	 * @param @return 设定文件
+	 * @return Bitmap DOM对象
+	 * @throws
+	 * @since CodingExample　Ver 1.1
+	 */
+	public static Bitmap scaleCenterCrop(Bitmap source, int newHeight,
+			int newWidth) {
+		int sourceWidth = source.getWidth();
+		int sourceHeight = source.getHeight();
+
+		// Compute the scaling factors to fit the new height and width,
+		// respectively.
+		// To cover the final image, the final scaling will be the bigger
+		// of these two.
+		float xScale = (float) newWidth / sourceWidth;
+		float yScale = (float) newHeight / sourceHeight;
+		float scale = Math.max(xScale, yScale);
+
+		// Now get the size of the source bitmap when scaled
+		float scaledWidth = scale * sourceWidth;
+		float scaledHeight = scale * sourceHeight;
+
+		// Let's find out the upper left coordinates if the scaled bitmap
+		// should be centered in the new size give by the parameters
+		float left = (newWidth - scaledWidth) / 2;
+		float top = (newHeight - scaledHeight) / 2;
+
+		// The target rectangle for the new, scaled version of the source bitmap
+		// will now
+		// be
+		RectF targetRect = new RectF(left, top, left + scaledWidth, top
+				+ scaledHeight);
+
+		// Finally, we create a new bitmap of the specified size and draw our
+		// new,
+		// scaled bitmap onto it.
+		Bitmap dest = Bitmap.createBitmap(newWidth, newHeight,
+				source.getConfig());
+		Canvas canvas = new Canvas(dest);
+		canvas.drawBitmap(source, null, targetRect, null);
+
+		return dest;
 	}
 }
