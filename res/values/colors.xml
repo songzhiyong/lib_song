@@ -6,4 +6,7 @@
     <color name="progress_default_circle_color">#80ffffff</color>
     <color name="progress_default_progress_color">#33b5e5</color>
 
+    
+    <!-- 颜色搭配 -->
+    <color name="gray">#e2e2e2</color>
 </resources>
