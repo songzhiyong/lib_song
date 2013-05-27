@@ -1,6 +1,3 @@
-<style type="text/css">
-li,p{font-family:Consolas,"微软雅黑";}
-</style>
 #菜鸟上路
 <p>&nbsp;&nbsp;&nbsp;作为一个Android开发的菜鸟，总结用到的一些工具框架(感谢框架的开发大牛O(∩_∩)O~),我会一直提升知识储备并更新这个项目.</p>
 ##开源项目
@@ -34,8 +31,7 @@ li,p{font-family:Consolas,"微软雅黑";}
 ####-多媒体
 <li>BitmapUtils：Bitmap相关操作及滤镜特效</li>
 <li>ImageUtils:处理图片的工具类（Terry_龙）
-![Alt text](https://github.com/songzhiyong/lib_song/blob/master/assets/jerome.jpg)
-
-##--交流方式
+##-交流方式
 <li>E-mail:songzhiyong1121@gmail.com</li>
 <li>QQ:780834790</li>
+![Alt text](https://github.com/songzhiyong/lib_song/blob/master/assets/jerome.jpg?raw=true)
