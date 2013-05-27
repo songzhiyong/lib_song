@@ -24,7 +24,7 @@
 ######-DimenUtils：转换dp<-->px
 ####-文件
 ######-SharedPreUtils：对SharedPreferences的封装
-######-Zip:Android文件解压压缩######-
+######-Zip:Android文件解压压缩
 ####-格式相关
 ######-DateTimeFormatter：时间日期格式转换
 ######-PinyinUtil：汉字转换为拼音
