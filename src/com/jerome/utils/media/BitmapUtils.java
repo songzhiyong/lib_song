@@ -114,7 +114,7 @@ public class BitmapUtils {
 	 *            图片位图
 	 * @return Bitmap 返回带有倒影的位图Bitmap
 	 * */
-	public static Bitmap createWithReflectedImage(Bitmap bmp) {
+	public static Bitmap createWithReflectedBmp(Bitmap bmp) {
 		if (bmp == null) {
 			return bmp;
 		}
@@ -163,7 +163,7 @@ public class BitmapUtils {
 	 * @return destBmp 怀旧效果的图片
 	 * 
 	 */
-	public static Bitmap createOlderImg(Bitmap bmp) {
+	public static Bitmap createOlderBmp(Bitmap bmp) {
 		int width = bmp.getWidth();
 		int height = bmp.getHeight();
 		destBmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
@@ -201,7 +201,7 @@ public class BitmapUtils {
 	 *            源bitmap
 	 * @return 锐化后图片
 	 */
-	public static Bitmap createSharpenImg(Bitmap bmp) {
+	public static Bitmap createSharpenBmp(Bitmap bmp) {
 		// 拉普拉斯矩阵
 		int[] laplacian = new int[] { -1, -1, -1, -1, 9, -1, -1, -1, -1 };
 		int width = bmp.getWidth();
@@ -253,7 +253,7 @@ public class BitmapUtils {
 	 *            源bitmap
 	 * @return destBmp 模糊后的图片
 	 */
-	public static Bitmap createBlurImg(Bitmap bmp) {
+	public static Bitmap createBlurBmp(Bitmap bmp) {
 		// 高斯矩阵
 		int[] gauss = new int[] { 1, 2, 1, 2, 4, 2, 1, 2, 1 };
 		int width = bmp.getWidth();
@@ -308,7 +308,7 @@ public class BitmapUtils {
 	 *            源bitmap
 	 * @return 底片效果图片
 	 */
-	public static Bitmap createFilmImg(Bitmap bmp) {
+	public static Bitmap createFilmBmp(Bitmap bmp) {
 		// RGBA的最大值
 		final int MAX_VALUE = 255;
 		int width = bmp.getWidth();
