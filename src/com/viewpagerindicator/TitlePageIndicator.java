@@ -393,6 +393,7 @@ public class TitlePageIndicator extends View implements PageIndicator {
 	 * 
 	 * @see android.view.View#onDraw(android.graphics.Canvas)
 	 */
+	@SuppressWarnings("incomplete-switch")
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
