@@ -187,7 +187,6 @@ public class Zip {
 		// 判断是不是文件
 		if (file.isFile()) {
 			ZipEntry zipEntry = new ZipEntry(fileString);
-			@SuppressWarnings("resource")
 			FileInputStream inputStream = new FileInputStream(file);
 			zipOutputSteam.putNextEntry(zipEntry);
 			int len;

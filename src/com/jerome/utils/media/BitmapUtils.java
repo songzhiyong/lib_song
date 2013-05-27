@@ -40,7 +40,7 @@ public class BitmapUtils {
 	 * @throws Exception
 	 *             圆角直径大于最小边长
 	 */
-	public static Bitmap createRoundCornerImg(Bitmap bmp, int radius) throws Exception {
+	public static Bitmap createRoundCornerBmp(Bitmap bmp, int radius) throws Exception {
 		if (2 * radius > Math.min(bmp.getWidth(), bmp.getHeight())) {
 			throw new Exception("参数错误");
 		}
