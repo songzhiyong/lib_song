@@ -9,7 +9,7 @@
 ######- google plus和google now listview 动画 alike
 ######- ProgressButton控件
 ######- UniversalImageLoader开源项目
-######- SlidingMenu控件
+######- SlidingMenu控件 ps:SlidingFragmentActivity未引入 依赖ABS
 ######- ViewPagerIndicator 
 ##工具类
 ####-加密
