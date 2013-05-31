@@ -2,7 +2,7 @@
  * 创建人：SongZhiyong
  * 创建时间：2013-1-5
  */
-package com.jerome.basebeans;
+package com.jerome.base;
 import java.io.Serializable;
 /**
  * 设备相关信息

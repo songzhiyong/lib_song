@@ -2,7 +2,7 @@
  * 创建人：SongZhiyong
  * 创建时间：2013-1-5
  */
-package com.jerome.basebeans;
+package com.jerome.base;
 
 import android.app.Application;
 import android.content.ComponentCallbacks;
@@ -13,12 +13,17 @@ import android.content.res.Configuration;
  * 
  * @author Jerome
  */
-public class BaseApplication extends Application {
+public abstract class BaseApplication extends Application {
+
 	public static final int DEBUG = 0; // 调试
 	public static final int RELEASE = 1; // 发布
 
 	// 控制软件模式
-	public static int STAT_DISTRIBUTE;
+	public static int STAT_DISTRIBUTE = DEBUG;
+	// Application实例
+	private Application mApp;
+	// Application实例
+	private int ACTIVITY_SWITCH_MODE = -1;
 
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
@@ -27,9 +32,27 @@ public class BaseApplication extends Application {
 
 	@Override
 	public void onCreate() {
-		// 控制软件模式
-		STAT_DISTRIBUTE = DEBUG;
 		super.onCreate();
+		mApp = this;
+		setDistribute();
+		switch (STAT_DISTRIBUTE) {
+		case DEBUG:
+			Log.setLogLevel(Log.VERBOSE);
+		case RELEASE:
+			Log.setLogLevel(Log.SUPPRESS);
+			break;
+		default:
+			break;
+		}
+	}
+
+	/** setDistribute:设置软件是否发布.子类实现 */
+	protected abstract void setDistribute();
+
+	protected abstract void setActivitySwitchMode();
+
+	public Application getmApp() {
+		return mApp;
 	}
 
 	@Override
