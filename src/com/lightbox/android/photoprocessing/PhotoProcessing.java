@@ -19,6 +19,8 @@ package com.lightbox.android.photoprocessing;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 
+import com.jerome.lib_song.R;
+
 /**
  * PhotoProcessing
  * 

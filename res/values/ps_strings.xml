@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="toast_hint_gallery">Pick from gallery</string>
+    <string name="toast_hint_camera">Use the camera</string>
+    <string name="toast_hint_filter">Apply photo effects</string>
+    <string name="toast_hint_edit">旋转</string>
+    <string name="toast_hint_save">保存</string>
+
+    <!-- Filter names -->
+    <string name="filter_original">原始</string>
+    <string name="filter_instafix">InstaFX</string>
+    <string name="filter_ansel">安塞尔</string>
+    <string name="filter_testino">特斯蒂诺</string>
+    <string name="filter_xpro">近摄</string>
+    <string name="filter_bw">黑白</string>
+    <string name="filter_sepia">深棕</string>
+    <string name="filter_cyano">青紫</string>
+    <string name="filter_retro">复古</string>
+    <string name="filter_georgia">Georgia</string>
+    <string name="filter_sahara">Sahara</string>
+    <string name="filter_hdr">动感</string>
+
+    <!-- Edit actions -->
+    <string name="edit_action_flip">左右反转</string>
+    <string name="edit_action_rotate_90_right">右旋 90°</string>
+    <string name="edit_action_rotate_90_left">左旋90°</string>
+    <string name="edit_action_rotate_180">旋转 180°</string>
+
+    <!-- Progress Dialogs -->
+    <string name="reverting_to_original">Reverting to original&#8230;</string>
+    <string name="applying_filter">处理中&#8230;</string>
+    <string name="flipping">左右反转&#8230;</string>
+    <string name="rotating_90_right">右旋 90° &#8230;</string>
+    <string name="rotating_90_left">左旋90° &#8230;</string>
+    <string name="rotating_180">旋转 180°&#8230;</string>
+
+    <!-- Save action -->
+    <string name="saved_photo_toast_message">Saved photo to %s</string>
+
+</resources>

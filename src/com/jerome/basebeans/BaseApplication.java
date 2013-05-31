@@ -14,8 +14,10 @@ import android.content.res.Configuration;
  * @author Jerome
  */
 public class BaseApplication extends Application {
-	public static final int DEBUG = 0;
-	public static final int RELEASE = 1;
+	public static final int DEBUG = 0; // 调试
+	public static final int RELEASE = 1; // 发布
+
+	// 控制软件模式
 	public static int STAT_DISTRIBUTE;
 
 	@Override
@@ -25,7 +27,7 @@ public class BaseApplication extends Application {
 
 	@Override
 	public void onCreate() {
-		//
+		// 控制软件模式
 		STAT_DISTRIBUTE = DEBUG;
 		super.onCreate();
 	}
