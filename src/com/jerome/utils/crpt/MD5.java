@@ -33,7 +33,17 @@ public class MD5 {
 		// }
 		// hexValue.append(Integer.toHexString(val));
 		// }
+		// /////另外一种写法/////////////////////////
+		// for (int i = 0; i < arr.length; ++i) {
+		// sb.append(Integer.toHexString((arr[i] & 0xFF) | 0x100).substring(1,
+		// 3));
+		// }
 		// //////////////////////////////////////////
+		// for (byte b : toencode) {
+		// sb.append(Integer.toHexString((b & 0xf0) >>> 4));
+		// sb.append(Integer.toHexString(b & 0x0f));
+		// }
+		// ////////////////////////////////////
 		for (int i = 0; i < md5Bytes.length; i++) {
 			hexValue.append(String.format("%02x", ((int) md5Bytes[i]) & 0xff));
 		}

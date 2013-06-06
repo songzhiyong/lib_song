@@ -67,6 +67,7 @@ class MorseCodeConverter {
 	/* 7 */new long[] { DASH, GAP, DASH, GAP, DOT, GAP, DOT, GAP, DOT },
 	/* 8 */new long[] { DASH, GAP, DASH, GAP, DASH, GAP, DOT, GAP, DOT },
 	/* 9 */new long[] { DASH, GAP, DASH, GAP, DASH, GAP, DASH, GAP, DOT }, };
+	
 	private static final long[] ERROR_GAP = new long[] { GAP };
 	/** Return the pattern data for a given character */
 	static long[] pattern(char c) {

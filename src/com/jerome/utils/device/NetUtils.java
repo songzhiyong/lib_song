@@ -20,6 +20,11 @@ import com.jerome.lib_song.R;
  * 
  */
 public class NetUtils {
+	/**
+	 * 检查android联网状态
+	 * @param context
+	 * @return
+	 */
 	public boolean checkNetworkState(final Context context) {
 		boolean flag = false;
 		ConnectivityManager manager = (ConnectivityManager) context
