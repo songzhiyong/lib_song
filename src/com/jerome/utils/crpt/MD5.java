@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 
 /**
  * @author JeromeSong<br>
- *         MD5加密算法
+ *         MD5加密算法--单向加密用于验证，常与Base64一起使用
  */
 public class MD5 {
 
@@ -25,7 +25,7 @@ public class MD5 {
 		byte[] md5Bytes = md5.digest(byteArray);
 
 		StringBuffer hexValue = new StringBuffer();
-		// 写法忒不专业
+		// 网上流行写法，忒不专业////////////////////
 		// for (int i = 0; i < md5Bytes.length; i++) {
 		// int val = ((int) md5Bytes[i]) & 0xff;
 		// if (val < 16) {
@@ -33,6 +33,7 @@ public class MD5 {
 		// }
 		// hexValue.append(Integer.toHexString(val));
 		// }
+		// //////////////////////////////////////////
 		for (int i = 0; i < md5Bytes.length; i++) {
 			hexValue.append(String.format("%02x", ((int) md5Bytes[i]) & 0xff));
 		}

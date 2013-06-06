@@ -209,14 +209,17 @@ public class DES {
 
 	public static void main(String[] args) {
 		try {
-			byte[] key = "11111111".getBytes();
-			byte[] iv = "22222222".getBytes();
-			byte[] data = DES.encrypt("ebc mode test".getBytes(), key);
-			System.out.print("EBC mode:");
-			System.out.println(new String(DES.decrypt(data, key)));
-			System.out.print("CBC mode:");
-			data = DES.CBCEncrypt("cbc mode test".getBytes(), key, iv);
-			System.out.println(new String(DES.CBCDecrypt(data, key, iv)));
+//			byte[] key = "11111111".getBytes();
+//			byte[] iv = "22222222".getBytes();
+//			byte[] data = DES.encrypt("ebc mode test".getBytes(), key);
+//			System.out.print("EBC mode:");
+//			System.out.println(new String(DES.decrypt(data, key)));
+//			System.out.print("CBC mode:");
+//			data = DES.CBCEncrypt("cbc mode test".getBytes(), key, iv);
+//			System.out.println(new String(DES.CBCDecrypt(data, key, iv)));
+			
+			byte[] key = generateKey();
+			System.out.println(new String(key));
 
 		} catch (Exception e) {
 			e.printStackTrace();
