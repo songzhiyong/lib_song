@@ -12,7 +12,7 @@ import java.util.zip.ZipOutputStream;
 
 /**
  * 
- * ClassName:Zip <br>
+ * ClassName:ZipUtils <br>
  * Function: Android文件解压压缩
  * 
  * @author Jerome Song
@@ -22,7 +22,7 @@ import java.util.zip.ZipOutputStream;
  * 
  * @see
  */
-public class Zip {
+public class ZipUtils {
 
 	/**
 	 * 取得压缩包中的 文件列表(文件夹,文件自选)
