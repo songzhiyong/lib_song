@@ -19,7 +19,7 @@ public abstract class BaseApplication extends Application {
 	public static final int RELEASE = 1; // 发布
 
 	// 控制软件模式
-	public static int STAT_DISTRIBUTE = DEBUG;
+	public final static int STAT_DISTRIBUTE = DEBUG;
 	// Application实例
 	private Application mApp;
 	// Application实例
