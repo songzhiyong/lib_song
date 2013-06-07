@@ -19,11 +19,11 @@ public abstract class BaseApplication extends Application {
 	public static final int RELEASE = 1; // 发布
 
 	// 控制软件模式
-	public final static int STAT_DISTRIBUTE = DEBUG;
+	protected static int STAT_DISTRIBUTE = DEBUG;
 	// Application实例
 	private Application mApp;
 	// Application实例
-	private int ACTIVITY_SWITCH_MODE = -1;
+	protected int ACTIVITY_SWITCH_MODE = -1;
 
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
