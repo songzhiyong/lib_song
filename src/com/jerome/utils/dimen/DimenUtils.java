@@ -5,6 +5,8 @@
 package com.jerome.utils.dimen;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.util.TypedValue;
 
 /**
  * 功能：尺寸转化
@@ -24,6 +26,11 @@ public class DimenUtils {
 	public static int dip2px(Context context, float dipValue) {
 		final float density = context.getResources().getDisplayMetrics().density;
 		return (int) (dipValue * density + 0.5f);
+	}
+
+	public static int dpToPx(Resources res, int dp) {
+		return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
+				res.getDisplayMetrics());
 	}
 
 	/**
