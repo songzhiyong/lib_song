@@ -55,7 +55,7 @@ JNIEXPORT jstring JNICALL Java_com_example_webdemo_util_H5Decode_decode(
 	for(i=0;i<16;i++)
 	{
 		sprintf(buffer, "%s%02x", buffer, d[i]);
-		LOGI("%02x",d[i]);
+//		LOGI("%02x",d[i]);
 	}
 	//输出/////////////////
 	return (*env)->NewStringUTF(env, buffer);

@@ -25,7 +25,7 @@ public class MD5 {
 		byte[] md5Bytes = md5.digest(byteArray);
 
 		StringBuffer hexValue = new StringBuffer();
-		// 网上流行写法，忒不专业////////////////////
+		// 写法(1)，忒不专业，不推荐////////////////////
 		// for (int i = 0; i < md5Bytes.length; i++) {
 		// int val = ((int) md5Bytes[i]) & 0xff;
 		// if (val < 16) {
@@ -33,12 +33,12 @@ public class MD5 {
 		// }
 		// hexValue.append(Integer.toHexString(val));
 		// }
-		// /////另外一种写法/////////////////////////
+		// 写法(2)/////////////////////////
 		// for (int i = 0; i < arr.length; ++i) {
 		// sb.append(Integer.toHexString((arr[i] & 0xFF) | 0x100).substring(1,
 		// 3));
 		// }
-		// //////////////////////////////////////////
+		// 写法(3)/////////////////////////////////////
 		// for (byte b : toencode) {
 		// sb.append(Integer.toHexString((b & 0xf0) >>> 4));
 		// sb.append(Integer.toHexString(b & 0x0f));
@@ -48,5 +48,8 @@ public class MD5 {
 			hexValue.append(String.format("%02x", ((int) md5Bytes[i]) & 0xff));
 		}
 		return hexValue.toString();
+	}
+	public static void main(String[] args) {
+		System.out.println(encrypt("123456"));
 	}
 }
