@@ -8,7 +8,7 @@
  * ──────────────────────────────────
  *   		 2013-5-31 		Jerome Song
  *
- * Copyright (c) 2013, TNT All Rights Reserved.
+ * Copyright (c) 2013, JEROME All Rights Reserved.
  */
 
 package com.jerome.base;
