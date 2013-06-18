@@ -43,4 +43,21 @@ public class BaseActivity extends Activity {
 		}
 		return false;
 	}
+
+	/**
+	 * 
+	 * getDrawableResID:根据资源名称获取其ID
+	 * 
+	 * @param @param imageName
+	 * @param @return
+	 * @return int
+	 * @throws
+	 * @since 下午4:41:53
+	 */
+	public int getDrawableResID(String imageName) {
+		Context ctx = getBaseContext();
+		int resId = getResources().getIdentifier(imageName, "drawable",
+				ctx.getPackageName());
+		return resId;
+	}
 }
