@@ -1,6 +1,7 @@
 package com.jerome.utils.device;
 
 import java.io.File;
+
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,12 +9,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images;
-import android.util.DisplayMetrics;
-import android.view.Display;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Toast;
 
 /**
  * Android系统启动其他自带程序方法

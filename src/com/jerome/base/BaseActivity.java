@@ -27,7 +27,7 @@ public class BaseActivity extends Activity {
 	 * 
 	 * @return
 	 */
-	protected boolean isPad() {
+	protected boolean isTablet() {
 		WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
 		Display display = wm.getDefaultDisplay();
 		DisplayMetrics dm = new DisplayMetrics();
