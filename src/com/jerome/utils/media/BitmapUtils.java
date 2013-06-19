@@ -18,6 +18,7 @@ import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
@@ -44,7 +45,8 @@ public class BitmapUtils {
 	 * @throws Exception
 	 *             圆角直径大于最小边长
 	 */
-	public static Bitmap createRoundCornerBmp(Bitmap bmp, int radius) throws Exception {
+	public static Bitmap createRoundCornerBmp(Bitmap bmp, int radius)
+			throws Exception {
 		if (2 * radius > Math.min(bmp.getWidth(), bmp.getHeight())) {
 			throw new Exception("参数错误");
 		}
@@ -61,6 +63,55 @@ public class BitmapUtils {
 		paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
 		canvas.drawBitmap(bmp, null, rect, paint);
 		return destBmp;
+	}
+
+	/**
+	 * 
+	 * getRoundedCornerBitmap: QQ代码中获取圆角bitmap
+	 * 
+	 * @param @param paramBitmap
+	 * @param @param paramFloat
+	 * @param @param paramInt1
+	 * @param @param paramInt2
+	 * @param @return
+	 * @return Bitmap
+	 * @throws
+	 * @since 上午11:47:07
+	 */
+	public static Bitmap getRoundedCornerBitmap(Bitmap srcBitmap, float radius,
+			int width, int height) {
+		Bitmap result;
+		try {
+			Bitmap localBitmap2 = Bitmap.createBitmap(width, height,
+					Bitmap.Config.ARGB_8888);
+			if (srcBitmap == null) {
+				result = null;
+			} else {
+				Canvas canvas = new Canvas(localBitmap2);
+				Paint localPaint = new Paint();
+				Rect localRect1 = new Rect(0, 0, srcBitmap.getWidth(),
+						srcBitmap.getHeight());
+				Rect localRect2 = new Rect(0, 0, width, height);
+				RectF localRectF = new RectF(localRect2);
+				localPaint.setAntiAlias(true);
+				canvas.drawARGB(0, 0, 0, 0);
+				localPaint.setColor(-12434878);
+				canvas.drawRoundRect(localRectF, radius, radius, localPaint);
+				localPaint.setXfermode(new PorterDuffXfermode(
+						PorterDuff.Mode.SRC_IN));
+				Matrix localMatrix = new Matrix();
+				localMatrix.setRectToRect(new RectF(localRect1), new RectF(
+						localRect2), Matrix.ScaleToFit.FILL);
+				canvas.drawBitmap(Bitmap.createBitmap(srcBitmap, 0, 0,
+						srcBitmap.getWidth(), srcBitmap.getHeight(),
+						localMatrix, true), localRect2, localRect2, localPaint);
+				result = localBitmap2;
+			}
+		} catch (Throwable localThrowable) {
+			localThrowable.printStackTrace();
+			result = null;
+		}
+		return result;
 	}
 
 	/**
