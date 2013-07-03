@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #菜鸟上路
 <p>&nbsp;&nbsp;&nbsp;作为一个Android开发的菜鸟，总结用到的一些工具框架(感谢框架的开发大牛O(∩_∩)O~),我会一直提升知识储备并更新这个项目.</p>
 ##开源项目
@@ -36,3 +37,9 @@
 ######-E-mail:songzhiyong1121@gmail.com
 ######-QQ:780834790
 ![Alt text](https://github.com/songzhiyong/lib_song/blob/master/assets/jerome.jpg?raw=true)
+=======
+jerome.github.com
+=================
+
+Jerome's Blog
+>>>>>>> branch 'master' of https://github.com/songzhiyong/jerome.github.com.git

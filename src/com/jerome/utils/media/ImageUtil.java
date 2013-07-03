@@ -19,7 +19,6 @@ public class ImageUtil {
 					paramBitmap.getHeight(), Bitmap.Config.ARGB_8888);
 			localObject = localBitmap;
 			if (localObject != null) {
-
 				Canvas localCanvas = new Canvas(localObject);
 				Paint localPaint = new Paint();
 				Rect localRect = new Rect(0, 0, paramBitmap.getWidth(),
