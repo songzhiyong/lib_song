@@ -13,6 +13,8 @@
 
 package com.jerome.utils.device;
 
+import android.content.ContentResolver;
+
 import com.alibaba.fastjson.JSONWriter.Context;
 import com.jerome.base.Log;
 
@@ -32,14 +34,11 @@ public class Settings {
 		String strTimeFormat = android.provider.Settings.System.getString(cv,
 				android.provider.Settings.System.TIME_12_24);
 
-		if (strTimeFormat.equals("24")) {
-			Log.i("activity", "当前是24制式");
-			return true;
-		} else {
-			Log.i("activity", "当前是12制式");
-			return false;
-		}
-
+		ContentResolver cv = getContentResolver();
+		// 获取当前系统设置
+		String strTimeFormat = android.provider.Settings.System.getString(cv,
+				android.provider.Settings.System.TIME_12_24);
+		return strTimeFormat.equals("24");
 	}
 
 }
