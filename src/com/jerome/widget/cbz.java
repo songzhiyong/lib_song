@@ -10,6 +10,17 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.PopupWindow;
 
+/**
+ * 
+ * ClassName:cbz <br>
+ * Function: 腾讯QQ代码 TODO：未完
+ * 
+ * @author Jerry
+ * @version
+ * @Date 2013 2013-7-12 下午5:01:52
+ * 
+ * @see
+ */
 public final class cbz extends AutoCompleteTextView {
 	private boolean jdField_a_of_type_Boolean;
 

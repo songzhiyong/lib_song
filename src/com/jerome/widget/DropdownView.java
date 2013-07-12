@@ -19,6 +19,17 @@ import android.widget.RelativeLayout;
 
 import com.jerome.lib_song.R;
 
+/**
+ * 
+ * ClassName:DropdownView <br>
+ * Function: TODO 腾讯QQ代码 <br>
+ * 
+ * @author Jerry
+ * @version
+ * @Date 2013 2013-7-12 下午5:03:47
+ * 
+ * @see
+ */
 public class DropdownView extends RelativeLayout implements OnDismissListener {
 	private float jdField_a_of_type_Float;
 	private Context context;

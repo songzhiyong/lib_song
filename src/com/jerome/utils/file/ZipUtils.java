@@ -197,6 +197,7 @@ public class ZipUtils {
 			}
 
 			zipOutputSteam.closeEntry();
+			inputStream.close();
 		} else {
 
 			// 文件夹的方式,获取文件夹下的子文件

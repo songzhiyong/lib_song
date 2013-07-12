@@ -3,11 +3,14 @@
  * 创建时间：2013-1-14
  */
 package com.jerome.utils.media;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -21,6 +24,7 @@ import android.graphics.Bitmap.Config;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+
 /**
  * 处理图片的工具类.
  * 
@@ -32,6 +36,7 @@ public class ImageUtils {
 	public static final int RIGHT = 1;
 	public static final int TOP = 3;
 	public static final int BOTTOM = 4;
+
 	/** */
 	/**
 	 * 图片去色,返回灰度图片
@@ -44,7 +49,8 @@ public class ImageUtils {
 		int width, height;
 		height = bmpOriginal.getHeight();
 		width = bmpOriginal.getWidth();
-		Bitmap bmpGrayscale = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
+		Bitmap bmpGrayscale = Bitmap.createBitmap(width, height,
+				Bitmap.Config.RGB_565);
 		Canvas c = new Canvas(bmpGrayscale);
 		Paint paint = new Paint();
 		ColorMatrix cm = new ColorMatrix();
@@ -54,6 +60,7 @@ public class ImageUtils {
 		c.drawBitmap(bmpOriginal, 0, 0, paint);
 		return bmpGrayscale;
 	}
+
 	/** */
 	/**
 	 * 去色同时加圆角
@@ -67,6 +74,7 @@ public class ImageUtils {
 	public static Bitmap toGrayscale(Bitmap bmpOriginal, int pixels) {
 		return toRoundCorner(toGrayscale(bmpOriginal), pixels);
 	}
+
 	/** */
 	/**
 	 * 把图片变成圆角
@@ -78,8 +86,8 @@ public class ImageUtils {
 	 * @return 圆角图片
 	 */
 	public static Bitmap toRoundCorner(Bitmap bitmap, int pixels) {
-		Bitmap output = Bitmap
-				.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Config.ARGB_8888);
+		Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
+				bitmap.getHeight(), Config.ARGB_8888);
 		Canvas canvas = new Canvas(output);
 		final int color = 0xff424242;
 		final Paint paint = new Paint();
@@ -94,6 +102,7 @@ public class ImageUtils {
 		canvas.drawBitmap(bitmap, rect, rect, paint);
 		return output;
 	}
+
 	/** */
 	/**
 	 * 使圆角功能支持BitampDrawable
@@ -102,11 +111,14 @@ public class ImageUtils {
 	 * @param pixels
 	 * @return
 	 */
-	public static BitmapDrawable toRoundCorner(BitmapDrawable bitmapDrawable, int pixels) {
+	public static BitmapDrawable toRoundCorner(Resources resources,
+			BitmapDrawable bitmapDrawable, int pixels) {
 		Bitmap bitmap = bitmapDrawable.getBitmap();
-		bitmapDrawable = new BitmapDrawable(toRoundCorner(bitmap, pixels));
+		bitmapDrawable = new BitmapDrawable(resources, toRoundCorner(bitmap,
+				pixels));
 		return bitmapDrawable;
 	}
+
 	/**
 	 * 读取路径中的图片，然后将其转化为缩放后的bitmap
 	 * 
@@ -131,6 +143,7 @@ public class ImageUtils {
 		// savePNG_After(bitmap,path);
 		saveJPGE_After(bitmap, path);
 	}
+
 	/**
 	 * 保存图片为PNG
 	 * 
@@ -151,6 +164,7 @@ public class ImageUtils {
 			e.printStackTrace();
 		}
 	}
+
 	/**
 	 * 保存图片为JPEG
 	 * 
@@ -171,6 +185,7 @@ public class ImageUtils {
 			e.printStackTrace();
 		}
 	}
+
 	/**
 	 * 水印
 	 * 
@@ -198,6 +213,7 @@ public class ImageUtils {
 		cv.restore();// 存储
 		return newb;
 	}
+
 	/**
 	 * 图片合成
 	 * 
@@ -217,7 +233,9 @@ public class ImageUtils {
 		}
 		return newBitmap;
 	}
-	private static Bitmap createBitmapForFotoMix(Bitmap first, Bitmap second, int direction) {
+
+	private static Bitmap createBitmapForFotoMix(Bitmap first, Bitmap second,
+			int direction) {
 		if (first == null) {
 			return null;
 		}
@@ -230,28 +248,33 @@ public class ImageUtils {
 		int sh = second.getHeight();
 		Bitmap newBitmap = null;
 		if (direction == LEFT) {
-			newBitmap = Bitmap.createBitmap(fw + sw, fh > sh ? fh : sh, Config.ARGB_8888);
+			newBitmap = Bitmap.createBitmap(fw + sw, fh > sh ? fh : sh,
+					Config.ARGB_8888);
 			Canvas canvas = new Canvas(newBitmap);
 			canvas.drawBitmap(first, sw, 0, null);
 			canvas.drawBitmap(second, 0, 0, null);
 		} else if (direction == RIGHT) {
-			newBitmap = Bitmap.createBitmap(fw + sw, fh > sh ? fh : sh, Config.ARGB_8888);
+			newBitmap = Bitmap.createBitmap(fw + sw, fh > sh ? fh : sh,
+					Config.ARGB_8888);
 			Canvas canvas = new Canvas(newBitmap);
 			canvas.drawBitmap(first, 0, 0, null);
 			canvas.drawBitmap(second, fw, 0, null);
 		} else if (direction == TOP) {
-			newBitmap = Bitmap.createBitmap(sw > fw ? sw : fw, fh + sh, Config.ARGB_8888);
+			newBitmap = Bitmap.createBitmap(sw > fw ? sw : fw, fh + sh,
+					Config.ARGB_8888);
 			Canvas canvas = new Canvas(newBitmap);
 			canvas.drawBitmap(first, 0, sh, null);
 			canvas.drawBitmap(second, 0, 0, null);
 		} else if (direction == BOTTOM) {
-			newBitmap = Bitmap.createBitmap(sw > fw ? sw : fw, fh + sh, Config.ARGB_8888);
+			newBitmap = Bitmap.createBitmap(sw > fw ? sw : fw, fh + sh,
+					Config.ARGB_8888);
 			Canvas canvas = new Canvas(newBitmap);
 			canvas.drawBitmap(first, 0, 0, null);
 			canvas.drawBitmap(second, 0, fh, null);
 		}
 		return newBitmap;
 	}
+
 	/**
 	 * 将Bitmap转换成指定大小
 	 * 
@@ -263,6 +286,7 @@ public class ImageUtils {
 	public static Bitmap createBitmapBySize(Bitmap bitmap, int width, int height) {
 		return Bitmap.createScaledBitmap(bitmap, width, height, true);
 	}
+
 	/**
 	 * Drawable 转 Bitmap
 	 * 
@@ -273,16 +297,19 @@ public class ImageUtils {
 		BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
 		return bitmapDrawable.getBitmap();
 	}
+
 	/**
 	 * Bitmap 转 Drawable
 	 * 
 	 * @param bitmap
 	 * @return
 	 */
-	public static Drawable bitmapToDrawableByBD(Bitmap bitmap) {
-		Drawable drawable = new BitmapDrawable(bitmap);
+	public static Drawable bitmapToDrawableByBD(Resources resources,
+			Bitmap bitmap) {
+		Drawable drawable = new BitmapDrawable(resources, bitmap);
 		return drawable;
 	}
+
 	/**
 	 * byte[] 转 bitmap
 	 * 
@@ -296,6 +323,7 @@ public class ImageUtils {
 			return null;
 		}
 	}
+
 	/**
 	 * bitmap 转 byte[]
 	 * 

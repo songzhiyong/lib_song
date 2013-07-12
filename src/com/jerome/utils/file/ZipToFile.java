@@ -1,4 +1,5 @@
 package com.jerome.utils.file;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -36,7 +37,7 @@ public class ZipToFile {
 	 */
 	public static void zipFile(String baseDir, String fileName)
 			throws Exception {
-		List fileList = getSubFiles(new File(baseDir));
+		List<File> fileList = getSubFiles(new File(baseDir));
 		ZipOutputStream zos = new ZipOutputStream(
 				new FileOutputStream(fileName));
 		ZipEntry ze = null;
@@ -89,8 +90,8 @@ public class ZipToFile {
 	 *            File 指定的目录
 	 * @return 包含java.io.File的List
 	 */
-	private static List getSubFiles(File baseDir) {
-		List ret = new ArrayList();
+	private static List<File> getSubFiles(File baseDir) {
+		List<File> ret = new ArrayList<File>();
 		File[] tmp = baseDir.listFiles();
 		for (int i = 0; i < tmp.length; i++) {
 			if (tmp[i].isFile())
