@@ -9,6 +9,18 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.Log;
 
+/**
+ * 
+ * ClassName:ImageUtil <br>
+ * Function: TODO ADD FUNCTION <br>
+ * com.tencent.mobileqq.utils.ImageUtil
+ * 
+ * @author Jerry
+ * @version
+ * @Date 2013 2013-7-12 上午10:32:52
+ * 
+ * @see
+ */
 public class ImageUtil {
 	public static final Bitmap round(Bitmap paramBitmap, float paramFloat) {
 		Bitmap localObject = null;
