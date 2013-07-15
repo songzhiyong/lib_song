@@ -18,7 +18,7 @@ import android.view.inputmethod.InputMethodManager;
  * @author SongZhiyong
  * 
  */
-public class SystemSupport {
+public class SystemService {
 	public static final String MIME_TYPE_EMAIL = "message/rfc822";
 	public static final String MIME_TYPE_TEXT = "text/*";
 	public static final String MAP_GOOGLE_TRAFICLINE_API = "http://ditu.google.cn/maps?f=d&source=s_d&saddr=%s,%s&daddr=%s,%s";
