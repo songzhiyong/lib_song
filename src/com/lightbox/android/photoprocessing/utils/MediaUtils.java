@@ -23,24 +23,28 @@ import android.media.ExifInterface;
 import android.net.Uri;
 import android.provider.MediaStore;
 
-/** 
- * MediaUtils 
+/**
+ * MediaUtils
+ * 
  * @author Nilesh Patel
  */
 public class MediaUtils {
 	/** Used to tag logs */
 	@SuppressWarnings("unused")
 	private static final String TAG = "MediaUtils";
-	
+
+	@SuppressWarnings("deprecation")
 	public static String getPath(Activity activity, Uri uri) {
-	    String[] projection = { MediaStore.Images.Media.DATA };
-	    Cursor cursor = activity.managedQuery(uri, projection, null, null, null);
-	    activity.startManagingCursor(cursor);
-	    int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-	    cursor.moveToFirst();
-	    return cursor.getString(column_index);
+		String[] projection = { MediaStore.Images.Media.DATA };
+		Cursor cursor = activity
+				.managedQuery(uri, projection, null, null, null);
+		activity.startManagingCursor(cursor);
+		int column_index = cursor
+				.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+		cursor.moveToFirst();
+		return cursor.getString(column_index);
 	}
-	
+
 	public static int getExifOrientation(String filepath) {
 		int degree = 0;
 		ExifInterface exif = null;
@@ -50,7 +54,8 @@ public class MediaUtils {
 			ex.printStackTrace();
 		}
 		if (exif != null) {
-			int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, -1);
+			int orientation = exif.getAttributeInt(
+					ExifInterface.TAG_ORIENTATION, -1);
 			if (orientation != -1) {
 				// We only recognise a subset of orientation tag values.
 				switch (orientation) {
