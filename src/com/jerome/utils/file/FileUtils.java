@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 /**
  * 
@@ -51,5 +52,33 @@ public class FileUtils {
 		mOutputStream.close();
 		inputStream.close();
 		return mOutputStream.toByteArray();
+	}
+	/**
+	 * 将文件大小进行相应格式化
+	 * @param size 文件大小 (单位byte)
+	 * @return 
+	 */
+	public static String getReadableFileSize(int size) {
+		final int BYTES_IN_KILOBYTES = 1024;
+		final DecimalFormat dec = new DecimalFormat("###.#");
+		final String KILOBYTES = " KB";
+		final String MEGABYTES = " MB";
+		final String GIGABYTES = " GB";
+		float fileSize = 0;
+		String suffix = KILOBYTES;
+
+		if (size > BYTES_IN_KILOBYTES) {
+			fileSize = size / BYTES_IN_KILOBYTES;
+			if (fileSize > BYTES_IN_KILOBYTES) {
+				fileSize = fileSize / BYTES_IN_KILOBYTES;
+				if (fileSize > BYTES_IN_KILOBYTES) {
+					fileSize = fileSize / BYTES_IN_KILOBYTES;
+					suffix = GIGABYTES;
+				} else {
+					suffix = MEGABYTES;
+				}
+			}
+		}
+		return String.valueOf(dec.format(fileSize) + suffix);
 	}
 }

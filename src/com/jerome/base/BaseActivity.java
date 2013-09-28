@@ -19,7 +19,8 @@ import android.view.View;
  * @author SongZhiyong
  * 
  */
-public abstract class BaseActivity<APP extends BaseApplication, R> extends Activity {
+public abstract class BaseActivity<APP extends BaseApplication, R> extends
+		Activity {
 	protected APP mApp;
 	protected String mClassName;
 	protected ApiResponseHandler<R> mApiResultHandler;
