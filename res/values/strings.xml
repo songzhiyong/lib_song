@@ -165,6 +165,7 @@
     <string name="request_fail">请求失败！</string>
     <string name="no_sdcard">SD卡已拔出</string>
     <string name="sd_smallsize">SD卡剩余空间不足</string>
+    <string name="network_error_label">网络异常</string>
     <string name="network_error">网络连接异常，请检查网络设置</string>
     <string name="network_slow">网络不给力哦！</string>
     <string name="request_data">正在获取数据</string>
