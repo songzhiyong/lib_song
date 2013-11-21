@@ -63,6 +63,10 @@ public final class Log {
 	private Log() {
 	}
 
+	/**
+	 * setLogLevel
+	 * @param log_level
+	 */
 	public static void setLogLevel(int log_level) {
 		LOG_LEVEL = log_level;
 	}
