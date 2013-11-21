@@ -28,6 +28,7 @@ public class ApiResponseHandler<R> implements IApiResponseHandler<R>,
 		mActivity = activity;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onResult(int api, byte status, R response) {
 		if (status == STATUS_EXCEPTION) {
