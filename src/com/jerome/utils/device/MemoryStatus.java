@@ -1,7 +1,9 @@
 package com.jerome.utils.device;
+
 import java.io.File;
 import android.os.Environment;
 import android.os.StatFs;
+
 /**
  * Android系统存储状况
  * 
@@ -9,6 +11,7 @@ import android.os.StatFs;
  */
 public class MemoryStatus {
 	static final int ERROR = -1;
+
 	/**
 	 * 外部存储是否可用
 	 * 
@@ -18,6 +21,7 @@ public class MemoryStatus {
 		return android.os.Environment.getExternalStorageState().equals(
 				android.os.Environment.MEDIA_MOUNTED);
 	}
+
 	/**
 	 * 获取手机内部可用空间大小
 	 * 
@@ -30,6 +34,7 @@ public class MemoryStatus {
 		long availableBlocks = stat.getAvailableBlocks();
 		return availableBlocks * blockSize;
 	}
+
 	/**
 	 * 获取手机内部空间大小
 	 * 
@@ -42,6 +47,7 @@ public class MemoryStatus {
 		long totalBlocks = stat.getBlockCount();
 		return totalBlocks * blockSize;
 	}
+
 	/**
 	 * 获取手机外部可用空间大小
 	 * 
@@ -58,6 +64,7 @@ public class MemoryStatus {
 			return ERROR;
 		}
 	}
+
 	/**
 	 * 获取手机外部空间大小
 	 * 
@@ -74,6 +81,7 @@ public class MemoryStatus {
 			return ERROR;
 		}
 	}
+
 	public static String formatSize(long size) {
 		String suffix = null;
 		if (size >= 1024) {

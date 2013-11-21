@@ -21,6 +21,15 @@ import java.text.DecimalFormat;
  * @see
  */
 public class FileUtils {
+
+	/**
+	 * 把文件读取为字符串
+	 * 
+	 * @param filePath
+	 *            文件路径
+	 * @return 输出的字符串
+	 * @throws IOException
+	 */
 	public static String file2String(String filePath) throws IOException {
 		StringBuilder data = new StringBuilder();
 		BufferedReader in = new BufferedReader(new FileReader(
@@ -53,10 +62,13 @@ public class FileUtils {
 		inputStream.close();
 		return mOutputStream.toByteArray();
 	}
+
 	/**
 	 * 将文件大小进行相应格式化
-	 * @param size 文件大小 (单位byte)
-	 * @return 
+	 * 
+	 * @param size
+	 *            文件大小 (单位byte)
+	 * @return
 	 */
 	public static String getReadableFileSize(int size) {
 		final int BYTES_IN_KILOBYTES = 1024;
