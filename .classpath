@@ -9,7 +9,7 @@
 	<classpathentry kind="lib" path="libs/ormlite-core-4.42.jar"/>
 	<classpathentry kind="lib" path="libs/afinal-0.3.3-bin.jar"/>
 	<classpathentry kind="lib" path="libs/pinyin4j-2.5.0.jar"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
