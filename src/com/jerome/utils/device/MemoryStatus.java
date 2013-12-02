@@ -1,6 +1,7 @@
 package com.jerome.utils.device;
 
 import java.io.File;
+
 import android.os.Environment;
 import android.os.StatFs;
 
@@ -30,8 +31,8 @@ public class MemoryStatus {
 	public static long getAvailableInternalMemorySize() {
 		File path = Environment.getDataDirectory();
 		StatFs stat = new StatFs(path.getPath());
-		long blockSize = stat.getBlockSize();
-		long availableBlocks = stat.getAvailableBlocks();
+		long blockSize = stat.getBlockSizeLong();
+		long availableBlocks = stat.getAvailableBlocksLong();
 		return availableBlocks * blockSize;
 	}
 
@@ -43,8 +44,8 @@ public class MemoryStatus {
 	public static long getTotalInternalMemorySize() {
 		File path = Environment.getDataDirectory();
 		StatFs stat = new StatFs(path.getPath());
-		long blockSize = stat.getBlockSize();
-		long totalBlocks = stat.getBlockCount();
+		long blockSize = stat.getBlockSizeLong();
+		long totalBlocks = stat.getBlockCountLong();
 		return totalBlocks * blockSize;
 	}
 
@@ -57,8 +58,8 @@ public class MemoryStatus {
 		if (externalMemoryAvailable()) {
 			File path = Environment.getExternalStorageDirectory();
 			StatFs stat = new StatFs(path.getPath());
-			long blockSize = stat.getBlockSize();
-			long availableBlocks = stat.getAvailableBlocks();
+			long blockSize = stat.getBlockSizeLong();
+			long availableBlocks = stat.getAvailableBlocksLong();
 			return availableBlocks * blockSize;
 		} else {
 			return ERROR;
@@ -74,8 +75,8 @@ public class MemoryStatus {
 		if (externalMemoryAvailable()) {
 			File path = Environment.getExternalStorageDirectory();
 			StatFs stat = new StatFs(path.getPath());
-			long blockSize = stat.getBlockSize();
-			long totalBlocks = stat.getBlockCount();
+			long blockSize = stat.getBlockSizeLong();
+			long totalBlocks = stat.getBlockCountLong();
 			return totalBlocks * blockSize;
 		} else {
 			return ERROR;
