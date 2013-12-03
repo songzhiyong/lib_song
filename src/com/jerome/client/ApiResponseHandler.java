@@ -11,7 +11,7 @@ import com.jerome.interfaces.IDialogFactory;
 import com.jerome.lib_song.R;
 
 /**
- * @author lifeix
+ * @author Jerome Song
  * 
  *         网络请求结果处理的Hanlder基类。其实例用于传给HttpTask中，回调给UI层。
  * 

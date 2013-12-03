@@ -1,9 +1,12 @@
 package com.jerome.utils.file;
 
 /**
- * Html标签和string的相互转换
+ * HtmlUtils <br>
+ * Function: Html标签和string的相互转换
+ * 
+ * @author Jerome Song
  */
-public class HtmlUtil {
+public class HtmlUtils {
 	/**
 	 * 把html标签转换成String类能够承载的
 	 * 
