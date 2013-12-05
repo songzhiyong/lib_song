@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.os.Build;
 import android.provider.Settings;
 
 import com.jerome.lib_song.R;
@@ -22,6 +23,7 @@ import com.jerome.lib_song.R;
 public class NetUtils {
 	/**
 	 * 检查android联网状态
+	 * 
 	 * @param context
 	 * @return
 	 */
@@ -41,7 +43,7 @@ public class NetUtils {
 					new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							Intent mIntent = null;
-							if (android.os.Build.VERSION.SDK_INT > 10) {
+							if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.GINGERBREAD_MR1) {// 判断是否
 								mIntent = new Intent(Settings.ACTION_SETTINGS);
 							} else {
 								mIntent = new Intent(
