@@ -30,6 +30,7 @@ public abstract class GenericBaseAdapter extends BaseAdapter {
 	protected View v;
 	protected Context context;
 
+	@SuppressWarnings("deprecation")
 	protected GenericBaseAdapter(Context context,
 			SpeedScrollListener scrollListener, List<? extends Object> items) {
 		this.context = context;
