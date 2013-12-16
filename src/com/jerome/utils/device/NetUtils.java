@@ -27,7 +27,7 @@ public class NetUtils {
 	 * @param context
 	 * @return
 	 */
-	public boolean checkNetworkState(final Context context) {
+	public static boolean checkNetworkState(final Context context) {
 		boolean flag = false;
 		ConnectivityManager manager = (ConnectivityManager) context
 				.getSystemService(Context.CONNECTIVITY_SERVICE);
