@@ -31,8 +31,8 @@ public class MemoryStatus {
 	public static long getAvailableInternalMemorySize() {
 		File path = Environment.getDataDirectory();
 		StatFs stat = new StatFs(path.getPath());
-		long blockSize = stat.getBlockSizeLong();
-		long availableBlocks = stat.getAvailableBlocksLong();
+		long blockSize = stat.getBlockSize();
+		long availableBlocks = stat.getAvailableBlocks();
 		return availableBlocks * blockSize;
 	}
 
@@ -44,8 +44,8 @@ public class MemoryStatus {
 	public static long getTotalInternalMemorySize() {
 		File path = Environment.getDataDirectory();
 		StatFs stat = new StatFs(path.getPath());
-		long blockSize = stat.getBlockSizeLong();
-		long totalBlocks = stat.getBlockCountLong();
+		long blockSize = stat.getBlockSize();
+		long totalBlocks = stat.getBlockCount();
 		return totalBlocks * blockSize;
 	}
 
@@ -58,8 +58,8 @@ public class MemoryStatus {
 		if (externalMemoryAvailable()) {
 			File path = Environment.getExternalStorageDirectory();
 			StatFs stat = new StatFs(path.getPath());
-			long blockSize = stat.getBlockSizeLong();
-			long availableBlocks = stat.getAvailableBlocksLong();
+			long blockSize = stat.getBlockSize();
+			long availableBlocks = stat.getAvailableBlocks();
 			return availableBlocks * blockSize;
 		} else {
 			return ERROR;
@@ -75,8 +75,8 @@ public class MemoryStatus {
 		if (externalMemoryAvailable()) {
 			File path = Environment.getExternalStorageDirectory();
 			StatFs stat = new StatFs(path.getPath());
-			long blockSize = stat.getBlockSizeLong();
-			long totalBlocks = stat.getBlockCountLong();
+			long blockSize = stat.getBlockSize();
+			long totalBlocks = stat.getBlockCount();
 			return totalBlocks * blockSize;
 		} else {
 			return ERROR;
